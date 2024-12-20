@@ -1,5 +1,7 @@
-export default function ActivationDataItem(props) {
-    const data = props;
+import {ActivationDataModel} from "../../model/activation";
+
+export default function ActivationDataItem(props:ActivationDataModel) {
+    const data : ActivationDataModel = props;
     return (
         <div className="title-desc">
             { data.pre_title && <h2 className="display-4 display-title anim-2 decor" dangerouslySetInnerHTML={{__html: data.pre_title}} /> }

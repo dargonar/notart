@@ -1,17 +1,14 @@
 import Activations from "../../components/activations";
 import ActivationDataItem from "./activation_data_item";
 import { activations } from "../../data/activations";
+import {ActivationModel, ActivationDataModel} from "../../model/activation";
 
-export default function ActivationPage(props) {
-	// const activation = props;
-  const activation = activations.find(obj => obj.slug == props.slug);
-  const listItems = activation.data.map((item, index) =>
+export default function ActivationPage(props:ActivationModel) {
+	const activation : ActivationModel = props;
+  // const activation : ActivationModel = activations.find(obj => obj.slug == props.slug);
+  const listItems : ActivationDataModel[] = activation.data.map((item, index) =>
     <ActivationDataItem {...item } key={index} />
   );
-  // const activation = props;
-  // const listItems = props.data.map((item, index) =>
-  //   <ActivationDataItem {...item } key={index} />
-  // );
   
   return (
   		 <>
