@@ -1,12 +1,12 @@
-import Link from 'next/link';
 import { activations } from "../data/activations";
-import  Activation  from "./activation";
+import Link from 'next/link';
 
 /* RENDER large blocks 2 by 2 ***************************** */
 function renderActivationLayout3(activation, index){
+
   return( 
     <>
-      <div className="section-cover bg-img" data-image-src={activation.img_big}>
+      <div className="section-cover bg-img" data-image-src={activation.img_big} key={index}>
       </div>
       <div className="section-wrapper">
         {/* content */}
@@ -67,7 +67,7 @@ function RenderActivationsLayout3Pair(pair, index, show_soon) {
 
 function ActivationsLayout3(_activations, title, show_soon=false) {
 
-  const pairs = _activations.reduce((acc, _, i, array) => {
+  const pairs = _activations.reduce((acc, _, i) => {
     if (i % 2 === 0) {
         acc.push([_activations[i], _activations[i + 1]]);
     }
@@ -78,9 +78,9 @@ function ActivationsLayout3(_activations, title, show_soon=false) {
   );
 
   return (
-    <>
+    <div key={1114}>
       {_pairs}
-    </>
+    </div>
   );
 }
 

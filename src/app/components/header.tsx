@@ -1,6 +1,6 @@
 'use client'
 
-import { useRouter , usePathname} from 'next/navigation';
+import { usePathname} from 'next/navigation';
 
 function Linkor(name, pathname, link) {
 	const is_on = pathname == link;
@@ -21,10 +21,8 @@ function Linkor(name, pathname, link) {
 }
 
 export default function Header() {
-	const router = useRouter();
 	const pathname = usePathname();
 	const is_home = pathname == '/';
-	// const is_home = false;
 
   return (
   		<header className="page-header navbar page-header-alpha scrolled-white menu-left logo-center topmenu-right">

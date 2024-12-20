@@ -2,7 +2,7 @@
 
 import { activations } from "../../data/activations";
 import ActivationPage from "../components/activation_page";
-import { useRouter , usePathname} from 'next/navigation';
+import { usePathname} from 'next/navigation';
 
 export default function ActivationBySlug() {
   const pathname = usePathname();

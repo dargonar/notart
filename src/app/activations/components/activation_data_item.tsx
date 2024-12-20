@@ -1,5 +1,3 @@
-import { activations } from "../../data/activations";
-
 export default function ActivationDataItem(props) {
     const data = props;
     return (

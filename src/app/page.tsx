@@ -1,13 +1,9 @@
 'use client'
 
-import Image from "next/image";
-import Header from "./components/header";
-import { useRouter } from 'next/navigation';
 import Services from "./components/services";
 import Activations from "./components/activations";
 
 export default function Home() {
-  const router = useRouter();
   return (
     <>
       
@@ -755,56 +751,6 @@ export default function Home() {
         </div>
         {/* End of contact section */}
         
-        {/* Begin of register/login/signin section */}
-        <div style={{display:'none'}} className="section section-register " data-section="register">
-
-          {/* Begin of section wrapper */}
-          <div className="section-wrapper with-margin">
-
-            {/* content */}
-            <div className="section-content no-anim">
-
-              <div className="row">
-
-                <div className="col-12">
-                  {/* Registration form container*/}
-                  <form className="send_email_form form-container form-container-transparent form-container-white"
-                  method="post" action="http://demo.highhay.com/atelieux/ajaxserver/serverfile.php">
-                    <div className="form-desc">
-                      <p className="invite  anim-3">Don't miss any news via email ! Register email if you agree :</p>
-                    </div>
-                    <div className="form-input  anim-4">
-                      <div className="row">
-                        <div className="col-12 col-md-8 col-lg-10">
-                          <div className="form-group form-success-gone">
-                            <input id="reg-email" name="email" className="form-control-line form-control-white" type="email"
-                            required placeholder="your@email.address" data-validation-type="email"
-                            />
-                          </div>
-                        </div>
-                        <div className="col-12 col-md-4 col-lg-2">
-                          <div className="btns-action anim-3 mt-md-0">
-                            <button id="submit-email" name="submit_email" className="btn btn-outline-white btn-full form-success-gone">
-                              <span className="text">Accept</span>
-                            </button>
-                          </div>
-                        </div>
-                      </div>
-                      <div className="form-group mb-0">
-                        <div>
-                          <p className="email-ok invisible form-text-feedback form-success-visible">Your email has been registred, thank you.</p>
-                        </div>
-                      </div>
-                    </div>
-                  </form>
-                </div>
-              </div>
-            </div>
-            {/* end of content */}
-          </div>
-          {/* End of section wrapper */}
-        </div>
-        {/* End of register/login/signin section */}
       </main>
       {/* END OF page main content */}
     </>
