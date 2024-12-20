@@ -1,12 +1,12 @@
 import Activations from "../../components/activations";
 import ActivationDataItem from "./activation_data_item";
-import { activations } from "../../data/activations";
+// import { activations } from "../../data/activations";
 import {ActivationModel, ActivationDataModel} from "../../model/activation";
 
 export default function ActivationPage(props:ActivationModel) {
 	const activation : ActivationModel = props;
   // const activation : ActivationModel = activations.find(obj => obj.slug == props.slug);
-  const listItems : ActivationDataModel[] = activation.data.map((item, index) =>
+  const listItems = activation.data.map((item, index) =>
     <ActivationDataItem {...item } key={index} />
   );
   

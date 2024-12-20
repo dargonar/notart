@@ -5,6 +5,7 @@ import { getActivations } from "../../data/activations";
 import ActivationPage from "../components/activation_page";
 import { usePathname} from 'next/navigation';
 import {ActivationModel} from "../../model/activation";
+import { ContactInfo } from "../../components/footer";
 
 export default function ActivationBySlug() {
   const pathname = usePathname();
@@ -18,6 +19,7 @@ export default function ActivationBySlug() {
   return (
     <>
       <ActivationPage {...activation}/>
+      <ContactInfo />
     </>
     );
 }

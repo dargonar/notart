@@ -21,7 +21,7 @@ function renderActivationLayout3(activation, index){
               <div className="btns-action anim-4">
               { activation.slug &&
                 <Link href={`/activations/${encodeURIComponent(activation.slug)}`} className="btn btn-outline-white" >
-                  <span className="text">View Project</span>
+                  <span className="text">View Activation</span>
                   <span className="icon">
                     <i className="arrow-right"></i>
                   </span>

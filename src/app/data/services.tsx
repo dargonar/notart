@@ -20,7 +20,7 @@ export const services = [
 			"title" : "Social Lab",
 			"action" : "Nuestra propuesta",
 			"category" : "",
-			"img_big" : "/img/urban-actions/k.jpg",
+			"img_big" : "/img/services/social_lab/k.png",
 			"img_small" : "",
 			"tagline" : "De la idea a la publicación: La representación visual y narrativa de valores, tradiciones, mitos, aspiraciones y diversidad de una comunidad, capturando la esencia de su cultura y sus historias únicas a través de la fotografía colaborativa.",
 			"skill_title" : "Nuestra experiencia en creación de identidad de comunidades, en las que aplicamos múltiples metodologías de narración anclado en el terreno de lo simbólico e inmaterial como un elemento conceptual integrado al registro documental.",

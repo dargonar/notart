@@ -1,7 +1,8 @@
 import type { Metadata } from "next";
 import "./globals.css";
 import Script from 'next/script';
-import Footer from "./components/header";
+import Footer from "./components/footer";
+import Header from "./components/header";
 
 export const metadata: Metadata = {
   title: 'NotArt',
@@ -44,6 +45,7 @@ export default function RootLayout({
             <p>loading</p>
           </div>
         </div>
+        <Header />
         {children}
         <Footer />
       </body>

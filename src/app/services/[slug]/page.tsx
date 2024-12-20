@@ -3,6 +3,7 @@
 import { services } from "../../data/services";
 import ServicePage from "../components/service_page";
 import { usePathname} from 'next/navigation';
+import { ContactInfo } from "../../components/footer";
 
 export default function ServiceBySlug() {
   const pathname = usePathname();
@@ -11,6 +12,7 @@ export default function ServiceBySlug() {
   return (
     <>
       <ServicePage {...service}/>
+      <ContactInfo />
     </>
     );
 }
