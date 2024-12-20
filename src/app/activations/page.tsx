@@ -1,9 +1,16 @@
 // import Link from 'next/link';
 import Activations from "../components/activations";
 import {ContactInfo} from "../components/footer";
+import { ActivationFilter, defaultActivationFilter} from "../model/activation";
 
 export default function ActivationsPage() {
-
+  const activationFilter:ActivationFilter = {
+    ...defaultActivationFilter, 
+    title:"Activaciones destacadas",
+    show_soon:true,
+    layout:3,
+  }
+  
   return (
     <>
       <div className="page-cover">
@@ -36,7 +43,7 @@ export default function ActivationsPage() {
         </div>
         {/* End of title section */}
 
-        <Activations title="Activaciones destacadas" layout="3" show_soon="true"/>
+        <Activations {...activationFilter} />  
 
         <ContactInfo />
 

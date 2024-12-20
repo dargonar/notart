@@ -1,9 +1,30 @@
-import { services } from "../data/services";
-import  Service  from "./service";
+import { ServiceModel } from "../model/service";
+import { getServices } from "../data/services";
+import Link from 'next/link';
+
+function Service(props:ServiceModel) {
+  // <a className="item media media-service" href="/services/{{props.slug}}"> 
+  // href={`/services/${encodeURIComponent(props.slug)}`}
+  // href={{ pathname: '/services/[slug]', query: { slug: props.slug } }}
+  // key="{props.slug}" 
+  return (
+       <div className="col-12 col-lg-4" >
+          <Link href={`/services/${encodeURIComponent(props.slug)}`} className="item media media-service">
+            <div className="img">
+              <i className="icon ion-code-working"></i>
+            </div>
+            <div className="media-body">
+              <h4 className="" dangerouslySetInnerHTML={{__html: props.title}} />
+              <p dangerouslySetInnerHTML={{__html: props.action}} />
+            </div>
+          </Link>
+        </div>
+  )
+};
 
 export default function Services() {
 	
-  const listServices = services.map((service, index) =>
+  const listServices = getServices().map((service:ServiceModel, index:number) =>
     <Service {...service} key={index}/>
   );
   return (

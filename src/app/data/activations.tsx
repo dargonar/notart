@@ -1,4 +1,4 @@
-import {ActivationModel} from "../../model/activation";
+import {ActivationModel, defaultActivationModel} from "../model/activation";
 
 export const activations = [
 		{
@@ -80,7 +80,11 @@ export const activations = [
 export function getActivations() {
 	const _activations : ActivationModel[] = activations.map(
 		(activationJson) => {
-			const activation:ActivationModel = activationJson;
+			const activation:ActivationModel = {
+				...defaultActivationModel,
+				...activationJson,
+				
+			}
 			return activation; 
 		});  	
 	return _activations;

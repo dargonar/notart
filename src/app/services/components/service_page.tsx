@@ -1,9 +1,17 @@
 import Activations from "../../components/activations";
+import { ActivationFilter, defaultActivationFilter} from "../../model/activation";
+import { ServiceModel } from "../../model/service";
 
-export default function ServicePage(props) {
-	const service = props;
-  // const activations = props.activations;
+export default function ServicePage(props:ServiceModel) {
+  const service:ServiceModel = props;
   
+  const activationFilter:ActivationFilter = {
+    ...defaultActivationFilter, 
+    title:"Related activations",
+    category:service.slug,
+    layout:1,
+  }
+
   return (
   		 <>
       <div className="page-cover">
@@ -104,7 +112,7 @@ export default function ServicePage(props) {
                 </div>)
         }
       
-        <Activations title="Related activations" category={service.slug} layout="1"/>        
+        <Activations {...activationFilter} />
         
       </main>
     </>

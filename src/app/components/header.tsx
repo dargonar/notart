@@ -2,8 +2,8 @@
 
 import { usePathname} from 'next/navigation';
 
-function Linkor(name, pathname, link) {
-	const is_on = pathname == link;
+function Linkor(name:string, pathname:string, link:string) {
+	const is_on:boolean = pathname == link;
 	if (is_on){
 		return (
 			<li className="nav-item active"> {name}

@@ -1,4 +1,4 @@
-
+import {ServiceModel, defaultServiceModel} from "../model/service";
 
 export const services = [
 		{
@@ -42,3 +42,15 @@ export const services = [
 		}
 	];
 
+export function getServices() {
+	const _services : ServiceModel[] = services.map(
+		(serviceJson) => {
+			const service:ServiceModel = {
+				...defaultServiceModel,
+				...serviceJson,
+			}
+			return service; 
+
+		});  	
+	return _services;
+}

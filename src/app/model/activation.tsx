@@ -25,3 +25,47 @@ export interface ActivationModel {
     gallery: ActivationGalleryModel[];
 }
 
+
+export const defaultActivationDataModel = {
+    img_first: "",
+    pre_title: "",
+    title: "",
+    data: "",
+    img_last: "",
+}
+
+export const defaultActivationGalleryModel = {
+    title: "",
+    desc: "",
+    img: "",
+}
+
+export const defaultActivationModel: ActivationModel = {
+    name: "",
+    slug: "",
+    title: "",
+    categories: [],
+    img_big: "",
+    img_small: "",
+    tagline: "",
+    data: [defaultActivationDataModel],
+    link: "",
+    gallery: [defaultActivationGalleryModel],
+};
+
+
+export interface ActivationFilter{
+    title:string, 
+    exclude_slug:string, 
+    category:string, 
+    show_soon:boolean, 
+    layout:number
+};
+
+export const defaultActivationFilter: ActivationFilter = {
+    title: "", 
+    exclude_slug : "", 
+    category:"", 
+    show_soon:false, 
+    layout:1,
+};

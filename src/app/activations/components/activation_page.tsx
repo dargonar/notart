@@ -1,15 +1,22 @@
 import Activations from "../../components/activations";
 import ActivationDataItem from "./activation_data_item";
-// import { activations } from "../../data/activations";
-import {ActivationModel, ActivationDataModel} from "../../model/activation";
+import { ActivationModel, ActivationFilter, defaultActivationFilter} from "../../model/activation";
 
 export default function ActivationPage(props:ActivationModel) {
-	const activation : ActivationModel = props;
+	
+  const activation : ActivationModel = props;
   // const activation : ActivationModel = activations.find(obj => obj.slug == props.slug);
   const listItems = activation.data.map((item, index) =>
     <ActivationDataItem {...item } key={index} />
   );
   
+  const activationFilter:ActivationFilter = {
+    ...defaultActivationFilter, 
+    title:"Related activations",
+    exclude_slug:activation.slug,
+    layout:1,
+  }
+
   return (
   		 <>
       <div className="page-cover">
@@ -98,7 +105,7 @@ export default function ActivationPage(props:ActivationModel) {
           </div>
         </div>
 
-        <Activations title="Related activations" exclude_slug={activation.slug} layout="1"/>
+        <Activations {...activationFilter}/>
         
       </main>
     </>

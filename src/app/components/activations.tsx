@@ -1,8 +1,12 @@
-import { activations } from "../data/activations";
+import { ActivationModel, defaultActivationModel, ActivationFilter } from "../model/activation";
+import { getActivations } from "../data/activations";
 import Link from 'next/link';
 
 /* RENDER large blocks 2 by 2 ***************************** */
-function renderActivationLayout3(activation, index){
+function renderActivationLayout3(
+  activation:ActivationModel, 
+  index:number
+){
 
   return( 
     <>
@@ -36,12 +40,18 @@ function renderActivationLayout3(activation, index){
     );
 }
 
-function RenderActivationsLayout3Pair(pair, index, show_soon) {
-  const soon_activation = {
-    "img_big": "/img/activations/soon.jpg",
-    "title": "Soon!",
-    "tagline": "You will surely be noticed by our next activation! :)"
+function RenderActivationsLayout3Pair(
+  pair:[ActivationModel, ActivationModel | undefined], 
+  index:number, 
+  show_soon:boolean
+){
+  const soon_activation : ActivationModel = {
+    ...defaultActivationModel,
+    img_big: "/img/activations/soon.jpg",
+    title: "Soon!",
+    tagline: "You will surely be noticed by our next activation! :)"
   };
+
   return (<>
       <div className="section section-twoside fp-auto-height-responsive content-white" data-section="activations-page-">
         <div className="section-side side-right side-anim">
@@ -65,14 +75,28 @@ function RenderActivationsLayout3Pair(pair, index, show_soon) {
     </>);
 }
 
-function ActivationsLayout3(_activations, title, show_soon=false) {
+function ActivationsLayout3
+(_activations:ActivationModel[], 
+  title:string, 
+  show_soon:boolean=false
+) {
 
-  const pairs = _activations.reduce((acc, _, i) => {
-    if (i % 2 === 0) {
-        acc.push([_activations[i], _activations[i + 1]]);
-    }
-      return acc;
-    }, []);
+  // const pairs = _activations.reduce((acc, _, i) => {
+  //   if (i % 2 === 0) {
+  //       acc.push([_activations[i], _activations[i + 1]]);
+  //   }
+  //     return acc;
+  //   }, []);
+  const pairs: [ActivationModel, ActivationModel | undefined][] = _activations.reduce(
+      (acc: [ActivationModel, ActivationModel | undefined][], _, i) => {
+          if (i % 2 === 0) {
+              acc.push([_activations[i], _activations[i + 1]]);
+          }
+          return acc;
+      },
+      [] // Initial value of the accumulator
+  );
+
   const _pairs = pairs.map((pair, index) =>
     RenderActivationsLayout3Pair(pair, index, show_soon)
   );
@@ -85,7 +109,10 @@ function ActivationsLayout3(_activations, title, show_soon=false) {
 }
 
 /* RENDER small blocks 2 by 2 ***************************** */
-function renderActivationLayout2(activation, index){
+function renderActivationLayout2(
+  activation:ActivationModel, 
+  index:number
+){
   return(
     <div className="item media media-post" key={index}>
       <div className="media-img mask-black">
@@ -112,7 +139,11 @@ function renderActivationLayout2(activation, index){
   );
 }
 
-function ActivationsLayout2(_activations, title, show_soon=false) {
+function ActivationsLayout2(
+  _activations:ActivationModel[], 
+  title:string, 
+  show_soon:boolean=false
+  ) {
   const listActivations = _activations.map((activation, index) =>
     renderActivationLayout2(activation, index)    
   );
@@ -162,7 +193,10 @@ function ActivationsLayout2(_activations, title, show_soon=false) {
 }
 
 /* RENDER small blocks 1 by 1 ***************************** */
-function renderActivationLayout1(activation, index){
+function renderActivationLayout1(
+  activation:ActivationModel, 
+  index: number
+){
   return(
     <div className="item media media-line" key={index}>
       <div className="media-img mask-black">
@@ -191,7 +225,11 @@ function renderActivationLayout1(activation, index){
   );
 }
 
-function ActivationsLayout1(_activations, title, show_soon=false) {
+function ActivationsLayout1(
+  _activations: ActivationModel[], 
+  title: string, 
+  show_soon:boolean=false
+) {
   const listActivations = _activations.map((activation, index) =>
     renderActivationLayout1(activation, index)    
   );
@@ -236,14 +274,18 @@ function ActivationsLayout1(_activations, title, show_soon=false) {
   )
 }
 
-export default function Activations({title, exclude_slug="", category="", show_soon=false, layout=1}) {
+export default function Activations(props:ActivationFilter) {
   
-  const _int_layout = parseInt(layout);
-  const _activations = category ? activations.filter(activation => activation.categories.includes(category)) : (exclude_slug ? activations.filter(activation => activation.slug !=exclude_slug ): activations); 
+  const _int_layout:number = props.layout;
+  const _activationModels : ActivationModel[] = getActivations();
+  const _activations : ActivationModel[] = props.category 
+    ? _activationModels.filter(activation => activation.categories.includes(props.category)) : (props.exclude_slug 
+    ? _activationModels.filter(activation => activation.slug !=props.exclude_slug ): _activationModels); 
+
   if (_int_layout==2)
-    return ActivationsLayout2(_activations, title, show_soon);
+    return ActivationsLayout2(_activations, props.title, props.show_soon);
   if (_int_layout==3)
-    return ActivationsLayout3(_activations, title, show_soon);
-  return  ActivationsLayout1(_activations, title, show_soon);
+    return ActivationsLayout3(_activations, props.title, props.show_soon);
+  return  ActivationsLayout1(_activations, props.title, props.show_soon);
   
 };
