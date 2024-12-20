@@ -1,4 +1,4 @@
-@tailwind base;
+/*@tailwind base;
 @tailwind components;
 @tailwind utilities;
 
@@ -19,3 +19,21 @@ body {
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
 }
+*/
+
+/*@import url("/fonts/opensans/stylesheet.css");
+@import url("/fonts/montserrat/stylesheet.css");
+@import url("/fonts/roboto/stylesheet.css");
+@import url("/fonts/playfair/stylesheet.css");
+@import url("/fonts/ionicons.min.css");
+@import url("/fonts/font-awesome.min.css");
+@import url("/fonts/maitree/stylesheet.css");
+@import url("/fonts/acumin/stylesheet.css");
+@import url("/css/pageloader.css");
+@import url("/css/bootstrap.min.css");
+@import url("/js/vendor/swiper.min.css");
+@import url("/js/vendor/jquery.fullpage.min.css");
+@import url("/js/vegas/vegas.min.css");
+@import url("/css/main.css");
+@import url("/css/style-default.css");
+*/

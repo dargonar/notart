@@ -1,0 +1,48 @@
+@font-face {
+  font-family: 'Maitree';
+  font-style: normal;
+  font-weight: 400;
+  src:  url('Maitree-Regular.ttf') format('ttf');
+}
+
+@font-face {
+    font-family: 'Maitree';
+    src: url('Maitree-Bold.ttf');
+    src: url('Maitree-Bold.ttf') format('truetype');
+    font-weight: bold;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Maitree Condensed';
+    src: url('Maitree-Light.ttf');
+    src: url('Maitree-Light.ttf') format('truetype');
+    font-weight: lighter;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Maitree Condensed';
+    src: url('Maitree-ExtraLight.ttf');
+    src: url('Maitree-ExtraLight.ttf') format('truetype');
+    font-weight: 100;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Maitree Condensed';
+    src: url('Maitree-Medium.ttf');
+    src: url('Maitree-Medium.ttf') format('truetype');
+    font-weight: 300;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Maitree Condensed';
+    src: url('Maitree-SemiBold.ttf');
+    src: url('Maitree-SemiBold.ttf') format('truetype');
+    font-weight: 600;
+    font-style: normal;
+}
