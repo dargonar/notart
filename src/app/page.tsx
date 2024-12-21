@@ -1,5 +1,6 @@
 'use client'
 
+import Team from "./components/team";
 import Services from "./components/services";
 import Activations from "./components/activations";
 import { ContactInfo } from "./components/footer";
@@ -8,17 +9,17 @@ import { ActivationFilter, defaultActivationFilter} from "./model/activation";
 export default function Home() {
 
   const activations_list_title = "Activaciones destacadas";
-  const activationFilter1:ActivationFilter = {
-    ...defaultActivationFilter, 
-    title:activations_list_title,
-    layout:1,
-  }
+  // const activationFilter1:ActivationFilter = {
+  //   ...defaultActivationFilter, 
+  //   title:activations_list_title,
+  //   layout:1,
+  // }
 
-  const activationFilter2:ActivationFilter = {
-    ...defaultActivationFilter, 
-    title:activations_list_title,
-    layout:2,
-  }
+  // const activationFilter2:ActivationFilter = {
+  //   ...defaultActivationFilter, 
+  //   title:activations_list_title,
+  //   layout:2,
+  // }
 
   const activationFilter3:ActivationFilter = {
     ...defaultActivationFilter, 
@@ -157,17 +158,12 @@ export default function Home() {
 
         <Services />
         
-        {/* Begin of title section */}
-        <div className="section section-description section-title-layout " data-section="activations">
-
-          {/* Begin of section wrapper */}
+        {/*<div className="section section-description section-title-layout " data-section="activations">
           <div className="section-wrapper with-margin">
-            {/* title */}
             <div className="section-title decor decor-anim text-center">
               <h5 className="title">Activaciones destacadas</h5>
             </div>
 
-            {/* Arrows scroll down/up */}
             <footer className="section-footer scrolldown">
               <a className="down">
                 <span className="icon"></span>
@@ -175,16 +171,30 @@ export default function Home() {
               </a>
             </footer>
           </div>
-          {/* End of section wrapper */}
+        </div>*/}
+
+        <div className="section section-description section-title-layout fp-auto-height no-footer" data-section="activations">
+
+          <div className="section-wrapper with-margin">
+            <div className="section-title decor decor-anim text-center">
+              <h5 className="title">Activaciones destacadas</h5>
+            </div>
+
+            <footer className="section-footer scrolldown">
+              <a className="down">
+                <span className="icon"></span>
+                <span className="txt">Scroll</span>
+              </a>
+            </footer>
+          </div>
         </div>
-        {/* End of title section */}
 
         <Activations {...activationFilter3} />
 
-        <Activations {...activationFilter2} />
+        {/*<Activations {...activationFilter2} />
 
-        <Activations {...activationFilter1} />
-
+        <Activations {...activationFilter1} />*/}
+        <Team />
         
         
         <ContactInfo />

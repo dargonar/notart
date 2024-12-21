@@ -53,7 +53,7 @@ function RenderActivationsLayout3Pair(
   };
 
   return (<>
-      <div className="section section-twoside fp-auto-height-responsive content-white" data-section="activations-page-">
+      <div className="section section-twoside fp-auto-height-responsive content-white" data-section="activations-page-" key={index}>
         <div className="section-side side-right side-anim">
           { renderActivationLayout3(pair[0], index*2) }
         </div>

@@ -9,6 +9,8 @@ export function ContactInfo(){
                 <div className="anim-2">
                   <p>GET IN TOUCH!</p>
                 </div>
+                <div className="title-decor"></div>
+                <br/>
                 <div className="address-container anim-3">
                   <div className="row">
                     <div className="col-12 col-md-6 col-lg-6">

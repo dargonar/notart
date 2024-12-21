@@ -21,17 +21,11 @@ export default function ActivationsPage() {
 
       <main className="page-main page-fullpage main-anim " id="mainpage">
         
-        {/* Begin of title section */}
-        <div className="section section-description section-title-layout " data-section="activations">
-
-          {/* Begin of section wrapper */}
+        {/*<div className="section section-description section-title-layout " data-section="activations">
           <div className="section-wrapper with-margin">
-            {/* title */}
             <div className="section-title decor decor-anim text-center">
               <h5 className="title">Activaciones destacadas</h5>
             </div>
-
-            {/* Arrows scroll down/up */}
             <footer className="section-footer scrolldown">
               <a className="down">
                 <span className="icon"></span>
@@ -39,12 +33,25 @@ export default function ActivationsPage() {
               </a>
             </footer>
           </div>
-          {/* End of section wrapper */}
+        </div>*/}
+
+        <div className="section section-description section-title-layout fp-auto-height no-footer" data-section="activations">
+          <div className="section-wrapper with-margin">
+            <div className="section-title decor decor-anim text-center">
+              <h5 className="title">Activaciones destacadas</h5>
+            </div>
+
+            <footer className="section-footer scrolldown">
+              <a className="down">
+                <span className="icon"></span>
+                <span className="txt">Scroll</span>
+              </a>
+            </footer>
+          </div>
         </div>
-        {/* End of title section */}
 
         <Activations {...activationFilter} />  
-
+        
         <ContactInfo />
 
       </main>

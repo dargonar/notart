@@ -41,7 +41,7 @@ export default function Header() {
         {/* End of menu icon toggler */}
 
         {/* Begin of logo/brand */}
-        <a className="navbar-brand" href="index.html#">
+        <a className="navbar-brand" href="/">
           <span className="logo">
             <img className="light-logo" src="/img/logo.png" alt="Logo" />
           </span>

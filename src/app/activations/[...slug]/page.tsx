@@ -6,11 +6,18 @@ import ActivationPage from "../components/activation_page";
 import { usePathname} from 'next/navigation';
 import {ActivationModel} from "../../model/activation";
 import { ContactInfo } from "../../components/footer";
+import Gallery from "../components/gallery";
 
 export default function ActivationBySlug() {
   const pathname = usePathname();
   const activation_slug = pathname.split("/");
-  const _slug = activation_slug[activation_slug.length-1];
+  
+  let _slug = activation_slug[activation_slug.length-1];
+  
+  const is_gallery = _slug == "gallery";
+  if (is_gallery){
+    _slug = activation_slug[activation_slug.length-2];
+  }
   const activation : ActivationModel | undefined = getActivations().find(obj => obj.slug === _slug);
   if (!activation) {
     notFound();
@@ -18,8 +25,14 @@ export default function ActivationBySlug() {
 
   return (
     <>
-      <ActivationPage {...activation}/>
-      <ContactInfo />
+      {!is_gallery && 
+        <>
+          <ActivationPage {...activation}/> 
+          <ContactInfo />
+        </>
+      }
+      {is_gallery && <Gallery {...activation} />}
+      
     </>
     );
 }

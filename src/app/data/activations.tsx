@@ -8,7 +8,7 @@ export const activations = [
 			"categories" : ["urban_actions", "social_lab"],
 			"img_big" : "/img/activations/heroes/k.png",
 			"img_small" : "/img/activations/heroes/k.png",
-			"tagline" : "Identidad &nbsp; fineart at street",
+			"tagline" : "Identidad &amp; fineart at street",
 			"data" : 
 				[{
 					"img_first" : "",
@@ -22,9 +22,129 @@ export const activations = [
 			"gallery": [
 				{
 					"title" : "",
-					"desc" : "",
-					"img" : "",
-				}
+				 	"desc" : "",
+					"img" : "/img/activations/heroes/gallery/a9845e_1bc3e4ea0062482081de288a2c4d1bd8~mv2.jpg"
+				},
+				{
+					"title" : "",
+				 	"desc" : "",
+					"img" : "/img/activations/heroes/gallery/a9845e_1cb8379568e8473c9246a1a4290e42d0~mv2.jpg"
+				},
+				{
+					"title" : "",
+				 	"desc" : "",
+					"img" : "/img/activations/heroes/gallery/a9845e_4d0bc203e8994b8a8d0443634533ff3d~mv2.jpg"
+				},
+				{
+					"title" : "",
+				 	"desc" : "",
+					"img" : "/img/activations/heroes/gallery/a9845e_4d10928623e3473c8fc0aabe70ceeb98~mv2.jpg"
+				},
+				{
+					"title" : "",
+				 	"desc" : "",
+					"img" : "/img/activations/heroes/gallery/a9845e_04ec5298e91d453a8f33a8d8ac5df6ef~mv2.jpg"
+				},
+				{
+					"title" : "",
+				 	"desc" : "",
+					"img" : "/img/activations/heroes/gallery/a9845e_5ff223843c8a4d6eadea0a62c30bb690~mv2.jpg"
+				},
+				{
+					"title" : "",
+				 	"desc" : "",
+					"img" : "/img/activations/heroes/gallery/a9845e_7eafc53fa15445e2b5cf75983f6facc5~mv2.jpg"
+				},
+				{
+					"title" : "",
+				 	"desc" : "",
+					"img" : "/img/activations/heroes/gallery/a9845e_8e19ab1c6be7411e9c502b9132c5822e~mv2.jpg"
+				},
+				{
+					"title" : "",
+				 	"desc" : "",
+					"img" : "/img/activations/heroes/gallery/a9845e_34a1464ea34348728331a270e6d4abf5~mv2.jpg"
+				},
+				{
+					"title" : "",
+				 	"desc" : "",
+					"img" : "/img/activations/heroes/gallery/a9845e_37b4e6f85b454dcd99636ec399e1dbdc~mv2.jpg"
+				},
+				{
+					"title" : "",
+				 	"desc" : "",
+					"img" : "/img/activations/heroes/gallery/a9845e_57dcd4d63f4c4e4c9720ef0512cab45a~mv2.jpg"
+				},
+				{
+					"title" : "",
+				 	"desc" : "",
+					"img" : "/img/activations/heroes/gallery/a9845e_85f22e8f7db64cb6af5d143f92c9234b~mv2.jpg"
+				},
+				{
+					"title" : "",
+				 	"desc" : "",
+					"img" : "/img/activations/heroes/gallery/a9845e_95e1324bd59043b0b865ac2a5d035647~mv2.jpg"
+				},
+				{
+					"title" : "",
+				 	"desc" : "",
+					"img" : "/img/activations/heroes/gallery/a9845e_3017c6417593479f8b3b939c59adff75~mv2.jpg"
+				},
+				{
+					"title" : "",
+				 	"desc" : "",
+					"img" : "/img/activations/heroes/gallery/a9845e_a02222f2dcc945ef998b123ec3228f08~mv2_d_1310_2048_s_2.jpg"
+				},
+				{
+					"title" : "",
+				 	"desc" : "",
+					"img" : "/img/activations/heroes/gallery/a9845e_aa2b270fa3f044189aff057a499fe6e3~mv2.jpg"
+				},
+				{
+					"title" : "",
+				 	"desc" : "",
+					"img" : "/img/activations/heroes/gallery/a9845e_b6e982f695574bbdaac7c2b4ea9f167f~mv2.jpg"
+				},
+				{
+					"title" : "",
+				 	"desc" : "",
+					"img" : "/img/activations/heroes/gallery/a9845e_b6f95f3a862b401281c800fe782acf76~mv2.jpg"
+				},
+				{
+					"title" : "",
+				 	"desc" : "",
+					"img" : "/img/activations/heroes/gallery/a9845e_b7f7f2656404456ca2f1a9c64102c420~mv2.jpg"
+				},
+				{
+					"title" : "",
+				 	"desc" : "",
+					"img" : "/img/activations/heroes/gallery/a9845e_b371c284fbd84033ae07b27e61686d17~mv2.jpg"
+				},
+				{
+					"title" : "",
+				 	"desc" : "",
+					"img" : "/img/activations/heroes/gallery/a9845e_e8fc763a7c364ebf94b4f3757ece4476~mv2.jpg"
+				},
+				{
+					"title" : "",
+				 	"desc" : "",
+					"img" : "/img/activations/heroes/gallery/a9845e_e987a59960364b30a7c4214404044fc8~mv2_d_1238_1868_s_2.jpg"
+				},
+				{
+					"title" : "",
+				 	"desc" : "",
+					"img" : "/img/activations/heroes/gallery/a9845e_f6e8dab310844c90b51bd652b254a2a2~mv2.jpg"
+				},
+				{
+					"title" : "",
+				 	"desc" : "",
+					"img" : "/img/activations/heroes/gallery/a9845e_f21cb026cebb401d98d2a41a5d1bbc78~mv2.jpg"
+				},
+				{
+					"title" : "",
+				 	"desc" : "",
+					"img" : "/img/activations/heroes/gallery/a9845e_f80cb609b37043d0962ca0d365b5a0e3~mv2.jpg"
+				},
 			],
 		},
 		{

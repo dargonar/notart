@@ -46,17 +46,12 @@ export default function Services() {
       </div>
 
       <main className="page-main page-fullpage main-anim " id="mainpage">
-        {/* Begin of title section */}
-        <div className="section section-description section-title-layout " data-section="services">
-
-          {/* Begin of section wrapper */}
+        
+        {/*<div className="section section-description section-title-layout " data-section="services">
           <div className="section-wrapper with-margin">
-            {/* title */}
             <div className="section-title decor decor-anim text-center">
               <h5 className="title">Services</h5>
             </div>
-
-            {/* Arrows scroll down/up */}
             <footer className="section-footer scrolldown">
               <a className="down">
                 <span className="icon"></span>
@@ -64,9 +59,22 @@ export default function Services() {
               </a>
             </footer>
           </div>
-          {/* End of section wrapper */}
+        </div>*/}
+
+        <div className="section section-description section-title-layout fp-auto-height no-footer" data-section="services">
+          <div className="section-wrapper with-margin">
+            <div className="section-title decor decor-anim text-center">
+              <h5 className="title">Servicios</h5>
+            </div>
+
+            <footer className="section-footer scrolldown">
+              <a className="down">
+                <span className="icon"></span>
+                <span className="txt">Scroll</span>
+              </a>
+            </footer>
+          </div>
         </div>
-        {/* End of title section */}
         
         {/* Begin of list products section */}
         <div className="section section-list-products fp-auto-height " data-section="service-page-1">

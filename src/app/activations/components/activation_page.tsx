@@ -1,3 +1,4 @@
+import Link from 'next/link';
 import Activations from "../../components/activations";
 import ActivationDataItem from "./activation_data_item";
 import { ActivationModel, ActivationFilter, defaultActivationFilter} from "../../model/activation";
@@ -16,6 +17,8 @@ export default function ActivationPage(props:ActivationModel) {
     exclude_slug:activation.slug,
     layout:1,
   }
+
+  const has_gallery : boolean = activation.gallery.length > 0;
 
   return (
   		 <>
@@ -88,7 +91,7 @@ export default function ActivationPage(props:ActivationModel) {
 
                   {listItems}
 
-                  { activation.link && 
+                  { activation.link  && 
                     <div className="btns-action anim-4">
                       <a className="btn btn-outline-white" href={activation.link}>
                         <span className="text">More about {activation.title}</span>
@@ -96,6 +99,12 @@ export default function ActivationPage(props:ActivationModel) {
                           <i className="arrow-right"></i>
                         </span>
                       </a>
+                      <Link className="btn btn-outline-white" href={`/activations/${encodeURIComponent(activation.slug)}/gallery`}>
+                        <span className="text">Gallery</span>
+                        <span className="icon">
+                          <i className="ion-images"></i>
+                        </span>
+                      </Link>
                     </div>
                   }
 
