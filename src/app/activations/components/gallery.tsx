@@ -1,4 +1,4 @@
-import {ActivationModel} from "../../../model/activation";
+import {ActivationModel} from "../../model/activation";
 
 export default function Gallery(props:ActivationModel){
 

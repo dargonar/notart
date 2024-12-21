@@ -18,7 +18,7 @@ export default function ActivationPage(props:ActivationModel) {
     layout:1,
   }
 
-  const has_gallery : boolean = activation.gallery.length > 0;
+  // const has_gallery : boolean = activation.gallery.length > 0;
 
   return (
   		 <>

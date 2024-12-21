@@ -1,6 +1,7 @@
 'use client'
 
 import { usePathname} from 'next/navigation';
+import Link from 'next/link';
 
 function Linkor(name:string, pathname:string, link:string) {
 	const is_on:boolean = pathname == link;
@@ -41,11 +42,12 @@ export default function Header() {
         {/* End of menu icon toggler */}
 
         {/* Begin of logo/brand */}
-        <a className="navbar-brand" href="/">
+
+        <Link className="btn btn-outline-white" href={`/`}>
           <span className="logo">
             <img className="light-logo" src="/img/logo.png" alt="Logo" />
           </span>
-        </a>
+        </Link>
         {/* End of logo/brand */}
 
         {/* begin of menu wrapper */}
