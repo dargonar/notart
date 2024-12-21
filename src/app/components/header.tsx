@@ -43,7 +43,7 @@ export default function Header() {
 
         {/* Begin of logo/brand */}
 
-        <Link className="btn btn-outline-white" href={`/`}>
+        <Link className="navbar-brand" href={`/`}>
           <span className="logo">
             <img className="light-logo" src="/img/logo.png" alt="Logo" />
           </span>
