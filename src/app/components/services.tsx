@@ -15,7 +15,7 @@ function Service(props:ServiceModel) {
             </div>
             <div className="media-body">
               <h4 className="" dangerouslySetInnerHTML={{__html: props.title}} />
-              <p dangerouslySetInnerHTML={{__html: props.action}} />
+              <p style={{display:'none'}} dangerouslySetInnerHTML={{__html: props.action}} />
             </div>
           </Link>
         </div>

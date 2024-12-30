@@ -170,7 +170,7 @@ export const activations = [
 			"name" 	: "San José Foto",
 			"slug" 	: "san_jose_festival_internacional_fotografia",
 			"title" : "San José Foto",
-			"categories" : ["events", "social_lab"],
+			"categories" : ["visual_engagement"],
 			"img_big" : "/img/activations/san_jose_foto/k.jpg",
 			"img_small" : "/img/activations/san_jose_foto/k.jpg",
 			"tagline" : "Festival Internacional de Fotografía",

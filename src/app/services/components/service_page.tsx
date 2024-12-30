@@ -86,9 +86,9 @@ export default function ServicePage(props:ServiceModel) {
               <div className="row">
                 <div className="col-12 col-lg-12 text-left">
                   <div className="title-desc">
-                    <h2 className="display-4 display-title anim-2 decor">Skills</h2>
-                    <h2 className="display-3 display-title anim-1">{service.skill_title}</h2>
-                    <p className="anim-2">{service.skill_description}</p>
+                    <h2 className="display-4 display-title anim-2 decor"></h2>
+                    <h2 className="display-3 display-title anim-1" dangerouslySetInnerHTML={{__html: service.skill_title}} />
+                    <p className="anim-2" dangerouslySetInnerHTML={{__html: service.skill_description}} />
                   </div>
                 </div>
               </div>
@@ -101,10 +101,8 @@ export default function ServicePage(props:ServiceModel) {
                   <div className="section-wrapper with-margin">
                     <div className="section-content anim">
                       <div className="row">
-                        <div className="col-12 col-lg-12 text-left">
-                          <div className="title-desc">
-                            <p className="anim-2" dangerouslySetInnerHTML={{__html: service.extra_html}} />
-                          </div>
+                        <div className="col-12 col-lg-12 text-left EXTRA">
+                          <div className="title-desc" dangerouslySetInnerHTML={{__html: service.extra_html }} />
                         </div>
                       </div>
                     </div>
